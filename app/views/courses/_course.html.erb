@@ -8,6 +8,11 @@
     <%= course.name %>
   </p>
 
+  <p>
+    <strong>Instructor:</strong>
+    <%= "#{ course.teacher.first_name } #{ course.teacher.last_name }" if course.teacher.present? %>
+  </p>
+
   <% unless course.description === '' %>
     <p>
       <strong>Description:</strong>
